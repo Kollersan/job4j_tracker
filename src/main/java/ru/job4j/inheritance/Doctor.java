@@ -4,7 +4,7 @@ public class Doctor extends Profession {
 
     private String direction;
 
-    public Doctor(){
+    public Doctor() {
     }
 
     public Doctor(String direction) {
