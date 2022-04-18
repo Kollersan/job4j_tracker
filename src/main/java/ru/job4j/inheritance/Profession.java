@@ -23,9 +23,6 @@ public class Profession {
         return birthday;
     }
 
-    public Profession() {
-    }
-
     public Profession(String name, String surname, String education, String birthday) {
         this.name = name;
         this.surname = surname;
