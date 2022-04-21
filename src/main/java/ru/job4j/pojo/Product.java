@@ -1,7 +1,5 @@
 package ru.job4j.pojo;
 
-import ru.job4j.inheritance.Programmer;
-
 public class Product {
     private String name;
     private int count;
