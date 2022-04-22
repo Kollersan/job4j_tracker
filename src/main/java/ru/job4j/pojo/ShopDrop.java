@@ -5,7 +5,9 @@ public class ShopDrop {
         for (int i = index; i < products.length; i++) {
             if (i != products.length - 1) {
                 products[i] = products[i + 1];
-            } else { products[i] = null; }
+            } else {
+                products[i] = null;
+            }
         }
         return products;
     }
