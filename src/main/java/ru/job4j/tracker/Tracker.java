@@ -23,7 +23,8 @@ public class Tracker {
                 size++;
             }
         }
-        return rsl = Arrays.copyOf(rsl, size);
+        rsl = Arrays.copyOf(rsl, size);
+        return rsl;
     }
 
     public Item[] findByName(String key) {
@@ -39,7 +40,8 @@ public class Tracker {
                 }
             }
         }
-        return rsl = Arrays.copyOf(rsl, size);
+        rsl = Arrays.copyOf(rsl, size);
+        return rsl;
     }
 
     public Item findById(int id) {
