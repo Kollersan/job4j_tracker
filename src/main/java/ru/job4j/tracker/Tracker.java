@@ -69,7 +69,7 @@ public class Tracker {
             items[index] = null;
             System.arraycopy(items, start, items, distPos, length);
             items[size - 1] = null;
-            size --;
+            size--;
             rsl = true;
         }
         return rsl;
