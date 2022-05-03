@@ -55,7 +55,9 @@ public class StartUI {
                 Item item = tracker.findById(id);
                 if (item != null) {
                     System.out.println(item);
-                } else System.out.println("Not found id: " + id);
+                } else {
+                    System.out.println("Not found id: " + id);
+                }
             } else if (select == 6) {
                 run = false;
             }
