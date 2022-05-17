@@ -7,7 +7,6 @@ import static org.hamcrest.Matchers.nullValue;
 
 public class StartUITest {
 
-
     @Test
     public void whenCreateItem() {
         Input in = new StubInput(
@@ -51,5 +50,4 @@ public class StartUITest {
         new StartUI().init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
-
 }
