@@ -33,6 +33,7 @@ public class StartUITest {
                         + "1. Exit" + ln
         ));
     }
+
     @Test
     public void whenShowAllTestOutputIsSuccessfully() {
         Output out = new StubOutput();
