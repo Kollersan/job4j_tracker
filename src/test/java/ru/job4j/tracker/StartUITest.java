@@ -52,6 +52,8 @@ public class StartUITest {
                 "-=Menu=-: " + ln
                         + "0. Show all Items" + ln
                         + "1. Exit" + ln
+                        + "=== Show all Items ===" + ln
+                        + one + ln
                         + "-=Menu=-: " + ln
                         + "0. Show all Items" + ln
                         + "1. Exit" + ln
@@ -76,6 +78,8 @@ public class StartUITest {
                 "-=Menu=-: " + ln
                         + "0. Find item by name" + ln
                         + "1. Exit" + ln
+                        + "=== Find items by name ===" + ln
+                        + one + ln
                         + "-=Menu=-: " + ln
                         + "0. Find item by name" + ln
                         + "1. Exit" + ln
