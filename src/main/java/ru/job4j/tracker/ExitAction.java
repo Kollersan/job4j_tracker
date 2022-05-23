@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import ru.job4j.all.UserAction;
+
 public class ExitAction implements UserAction {
     @Override
     public String name() {

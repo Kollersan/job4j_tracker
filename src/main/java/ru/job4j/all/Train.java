@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.all;
 
 public class Train implements Vehicle {
     @Override
