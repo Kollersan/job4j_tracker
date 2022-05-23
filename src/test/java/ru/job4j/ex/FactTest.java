@@ -9,7 +9,7 @@ import static org.junit.Assert.fail;
 public class FactTest {
 
     @Test(expected = IllegalArgumentException.class)
-    public void WhenLessZero() {
+    public void whenLessZero() {
         Fact.calc(-1);
     }
 }
