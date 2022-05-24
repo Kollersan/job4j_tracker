@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import ru.job4j.all.UserAction;
-
 public class ShowAction implements UserAction {
     private final Output out;
 
