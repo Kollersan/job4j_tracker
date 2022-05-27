@@ -15,6 +15,35 @@ public class FindEl {
         return rsl;
     }
 
+    public static boolean sent(String value, String[] abuses) throws ElementAbuseException {
+        boolean rsl = false;
+        for (int i = 0; i < abuses.length; i++) {
+            if (abuses[i].equals(value)) {
+                return true;
+            }
+        }
+        if (!rsl) {
+            throw new ElementAbuseException("That word is banned");
+        }
+        return true;
+    }
+
+    public static void process(String[] values, String key, String[] abuses) {
+        try {
+            if (indexOf(values, key) != -1) {
+                sent(key, abuses);
+            }
+        } catch (ElementAbuseException ea) {
+            ea.printStackTrace();
+        } catch (ElementNotFoundException en) {
+            en.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } catch (Throwable th) {
+            th.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) throws ElementNotFoundException {
         try {
             indexOf(new String[]{"0", "qweqe", "qwe"}, "1");
