@@ -9,7 +9,7 @@ public class PasswordValidatorTest {
     @Test
     public void whenPasswordIsNull() {
         try {
-            PasswordValidator.Validate("");
+            PasswordValidator.validate("");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("password must be more than 0"));
         }
@@ -18,47 +18,52 @@ public class PasswordValidatorTest {
     @Test
     public void whenPasswordInBanList() {
         try {
-            PasswordValidator.Validate("adMin");
+            PasswordValidator.validate("adMin");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("chose a harder password"));
         }
     }
+
     @Test
     public void whenPasswordLengthOutOfRange() {
         try {
-            PasswordValidator.Validate("Ajah");
+            PasswordValidator.validate("Ajah");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("Password must be less than 32 symbols and more than 8 symbols"));
         }
     }
+
     @Test
     public void whenPasswordLowerCase() {
         try {
-            PasswordValidator.Validate("aaaaaaaa");
+            PasswordValidator.validate("aaaaaaaa");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("password must have 1 or more uppercase symbol"));
         }
     }
+
     @Test
     public void whenPasswordUpperCase() {
         try {
-            PasswordValidator.Validate("AAAAAAAA");
+            PasswordValidator.validate("AAAAAAAA");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("password must have 1 or more Lowercase symbol"));
         }
     }
+
     @Test
     public void whenPasswordDidNotHaveNumbers() {
         try {
-            PasswordValidator.Validate("AAAAfAAA");
+            PasswordValidator.validate("AAAAfAAA");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("password must have 1 or more numbers"));
         }
     }
+
     @Test
     public void whenPasswordDidNotHaveSpecialSymbol() {
         try {
-            PasswordValidator.Validate("AAAAfAAA1");
+            PasswordValidator.validate("AAAAfAAA1");
         } catch (Exception e) {
             assertThat(e.getMessage(), is("password must have 1 or more special symbols"));
         }
