@@ -24,21 +24,27 @@ public final class PasswordValidator {
         }
         int numberscount = 0;
         for (int i = 0; i < password.length(); i++) {
-            if (password.charAt(i) > '9' || password.charAt(i) < '0') {
+            if (password.charAt(i) < '9' && password.charAt(i) > '0') {
                 numberscount++;
             }
-            if (numberscount == password.length()) {
-                throw new IllegalArgumentException("password must have 1 or more numbers");
+            if (numberscount > 0) {
+                break;
             }
+        }
+        if (numberscount == 0) {
+            throw new IllegalArgumentException("password must have 1 or more numbers");
         }
         int symbolscout = 0;
         for (int i = 0; i < password.length(); i++) {
             if (password.charAt(i) > '/') {
                 symbolscout++;
             }
-            if (symbolscout == password.length()) {
-                throw new IllegalArgumentException("password must have 1 or more special symbols");
+            if (symbolscout > 0) {
+                break;
             }
+        }
+        if (symbolscout == 0) {
+        throw new IllegalArgumentException("password must have 1 or more special symbols");
         }
         return password;
     }
